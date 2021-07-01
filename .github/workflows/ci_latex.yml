@@ -32,10 +32,13 @@ jobs:
       - uses: xu-cheng/latex-action@v2
         with:
           root_file: Skript/main.tex
+        env:
+          TEXINPUTS: ".:./Skript//:"
       
       # Upload artifacts
       - uses: actions/upload-artifact@v2
         with:
           name: Skript
           path: Skript/main.pdf
+          
 
